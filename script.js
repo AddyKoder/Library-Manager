@@ -21,7 +21,7 @@ function notify(msg, color = 0, bgcolor = 0) {
         message.innerText = '...';
         message_pane.style.color = 'rgb(117, 117, 117)';
         message_pane.style.backgroundColor = 'rgb(241, 241, 241)';
-    }, 3000)
+    }, 5000)
 
 
 
