@@ -1,0 +1,130 @@
+/* css for top panel */
+
+#top_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+#status{
+    border-radius: 8px;
+    /* border:4px solid rgb(12, 146, 0); */
+    width: 300px;
+    height: 50px;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(12, 145, 0);
+    font-weight: 900;
+    font-family: cursive;
+    font-weight: normal;
+    margin-left: 20px;
+    background-color: rgba(200, 255, 195, 0.623);
+    /* box-shadow: 0px 0px 35px 15px #a3ffa0; */
+    /* border: 0.1px solid rgba(131, 131, 131, 0.384); */
+    
+    
+    
+}
+#book_info{
+    display: flex;
+    padding-left: 10px;
+    width: 500px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#about_book{
+    display: flex;
+}
+
+#col1>div{
+    width: 150px;
+}
+
+#col2>div{
+    width: 400px;
+}
+
+.type{
+    font-size: 20px;
+    
+    border-radius: 5px;
+    color: rgb(87, 87, 87);
+    padding:2px 15px;
+    
+    width: 100px;
+    display: inline;
+    font-weight: 100;
+}
+.info{
+    margin: 8px 0px;
+    
+
+}
+
+.value{
+    font-size: 22px;
+    font-family: cursive;
+    color: rgb(0, 140, 158);
+    font-weight: 600;
+}
+
+div.type{
+    width: 500px;
+    display: inline;
+} 
+
+
+#buttons>input{
+    width: 170px;
+    margin: 15px 60px;
+    
+    font-size: 25px;
+    font-family: cursive;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    border: none;
+    color: rgb(255, 255, 255);
+}
+
+#buttons>input:hover{
+    opacity: 70%;
+    cursor: pointer;
+}
+
+#top_pane{
+    margin-bottom: 25px;
+}
+
+
+/* CSS for the bottom panel */
+
+#add_book_form{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+}
+
+#add_book_form>input{
+    margin: 8px 4px;
+    height: 26px;
+    font-size: 20px;
+    padding: 3px 18px;
+    border-radius: 5px;
+    border: none;
+    /* background-color: rgb(223, 251, 255); */
+    border: 1px solid grey;
+}
+
+#add_book_form>input:focus{
+    outline: none;
+}
+
+#add_book:hover, #cancel_add_book:hover{
+    cursor: pointer;
+    opacity: 90%;
+}
+

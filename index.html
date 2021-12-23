@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet" href="left.css">
+    <link rel="stylesheet" href="right.css">
+
+
+
+</head>
+
+<body>
+
+
+    <header>
+
+        <div id="web_nav">
+
+            <h1 id="website_name">Library Manager</h1>
+
+            <div id="user_info">
+                <span id="user_name" style="font-size: 20px;">Aditya</span>
+                <span id="user_library">@ Kolkata National Library</span>
+            </div>
+
+        </div>
+
+
+        <div id="message_pane">
+            <span id="message">
+                ...
+            </span>
+            <span id="github_link" onclick="location.href='https://github.com/AddyKoder'">
+                © Aditya
+            </span>
+        </div>
+
+    </header>
+
+
+    <div id="main">
+
+
+        <div id="left_pane">
+            <div id="left_nav">
+                <h3 class="heading" style="font-size: 40px;">All books</h3>
+
+                <div id="search">
+                    <input oninput="filter()" type="text" name="" id="search_input" placeholder="Search"
+                        spellcheck="false">
+                    <input onclick="clear_search()" type="button" value=" " id="clear_search">
+                </div>
+            </div>
+
+            <div id="books_info_header">
+                <span class="table_heading">
+                    Id
+                </span>
+
+                <span class="table_heading"
+                    style="width: 350px;border-left: 1px solid rgb(216, 216, 216); padding-left: 15px;">
+                    Name
+                </span>
+
+                <span class="table_heading"
+                    style="width: 150px;border-left: 1px solid rgb(216, 216, 216); padding-left: 15px;">
+                    Status
+                </span>
+
+            </div>
+
+            <div id="books_pane">
+
+                <!-- <div class="book">
+                    <span id="id" style="width: 50px;text-align:center;">${key}</span>
+                    <span style="width: 350px; font-weight: 700; opacity: 75%;">Harry Potter</span>
+                    <span
+                        style="width: 150px; color: green; font-weight: 700; border-radius: 5px; background-color: rgb(214, 255, 214); text-align: center;">Available</span>
+                </div> -->
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+            <div id="books_buttons">
+                <span style="width: 237px; font-family: cursive;" id="total_books">456 books</span>
+                <input onclick="add_10_books()" type="button" value="+10 Books" style="width: 237px; height: 35px;">
+                <input onclick="clear_library()" id="clear_books" type="button" value="Clear Library"
+                    style="width: 237px; height: 35px;">
+
+            </div>
+        </div>
+
+        <div id="right_pane">
+            <div id="top_pane">
+
+                <div id="top_nav">
+
+                    <h3 class="heading" style="font-size: 40px; color: rgb(68, 68, 68); " id="name_value">...</h3>
+                    <span id="status">...</spani>
+                </div>
+
+                <div id="about_book">
+
+                    <div id="book_info">
+
+
+
+                        <!-- <span>ID : 37</span>
+                        <span>Author : Wicter Muntro Roy</span>
+                        <span>Pages : 899</span>
+                        <span>Prise : 49$</span>
+                        <span>Type : Fiction</span>
+                        <span>Date Added : 26 January</span> -->
+                        <div id="col1">
+                            <div class="info">
+                                <span class="type">&nbsp; &nbsp; &nbsp; &nbsp;Id :</span>
+                                <span class="value" id="id_value">...</span>
+                            </div>
+
+
+                            <div class="info">
+                                <span class="type">Pages :</span><span class="value" id="page_value">...</span>
+                            </div>
+
+                            <div class="info">
+                                <span class="type"> &nbsp; Price :</span><span class="value" id="price_value">...</span>
+                            </div>
+                        </div>
+
+
+                        <div id="col2">
+                            <div class="info">
+                                <span class="type"> &nbsp; &nbsp; &nbsp; &nbsp; Author :</span><span class="value"
+                                    id="author_value">...</span>
+                            </div>
+
+                            <div class="info">
+                                <span class="type"> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type
+                                    :</span><span class="value" id="type_value">...</span>
+                            </div>
+
+                            <div class="info">
+                                <span class="type">Date Added :</span><span class="value" id="date_value">...</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="book_operations">
+                        <div id="buttons">
+                            <input onclick="borrow_return_active()" type="button" id="borrow_return" value="..."
+                                style="background-color: rgb(0, 177, 201);">
+                            <input onclick="remove_active()" type="button" id="remove" value="..."
+                                style="background-color: red;">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            <hr>
+
+            <div id="bottom_pane">
+                <h3 class="heading">
+                    Add book
+                </h3>
+
+                <div id="add_book_form">
+
+                    <input type="text" name="" id="enter_name" placeholder="Name" style="width: 600px;"
+                        spellcheck="false">
+
+                    <input type="text" name="" id="enter_author" placeholder="Author" style="width: 600px;"
+                        spellcheck="false">
+
+                    <input type="number" min="1" max="9999" step="1" maxlength="4" name="" id="enter_page"
+                        placeholder="Pages (1-9999)" style="width: 276px;">
+
+
+                    <input type="number" min="1" max="9999" step="1" name="" id="enter_price"
+                        placeholder="Price in $ (1-999)" style="width: 276px;">
+
+
+                    <input type="text" name="" id="enter_type" placeholder="Type" style="width: 600px;"
+                        spellcheck="false">
+
+                    <input onclick="add_book()" type="button" value="ADD" id="add_book" style="width: 500px; height: 40px; background-color: rgb(0, 177, 201); color: white; font-weight: 900; letter-spacing: 3px;
+                ">
+                    <input onclick="cancel_add_book()" type="button" value="Cancel" id="cancel_add_book" style="width: 130px; height: 40px; background-color: rgb(233, 233, 233);font-weight: 100; color: rgb(70, 70, 70);
+                ">
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
