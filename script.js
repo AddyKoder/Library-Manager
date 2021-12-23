@@ -1,4 +1,5 @@
 let timeout;
+let timeout2;
 let active_book;
 
 function notify(msg, color = 0, bgcolor = 0) {
@@ -118,7 +119,7 @@ function add_book() {
     }
 }
 
-function add_10_books() {
+function add_10_books(n=10) {
 
     function month_name(n) {
         const monthNames = ["January", "February", "March", "April", "May", "June",
@@ -160,7 +161,7 @@ function add_10_books() {
     }
 
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < n; i++) {
 
         localStorage.setItem(n_index, JSON.stringify(book))
         n_index = String(Number(n_index) + 1)
@@ -253,7 +254,7 @@ function plot_books(keys = Object.keys(localStorage)) {
 
 
 
-        total_books.innerHTML = `${sort_keys(keys).length}/${Object.keys(localStorage).length - 1} books`
+        total_books.innerHTML = `${sort_keys(keys).length}/${Object.keys(localStorage).length - 1}&nbsp &nbsp books`
 
         add_click_listeners()
 
@@ -434,7 +435,9 @@ function clear_search() {
 }
 
 function filter() {
-    search_value = search_input.value.toLowerCase();
+    clearTimeout(timeout2)
+    timeout2 = setTimeout(() => {
+        search_value = search_input.value.toLowerCase();
     if (search_value.replaceAll(' ', '') != '') {
 
         keys = sort_keys(Object.keys(localStorage))
@@ -458,6 +461,8 @@ function filter() {
         plot_books()
 
     }
+    }, 200);
+    
 }
 
 plot_books()
